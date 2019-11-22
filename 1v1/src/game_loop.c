@@ -24,9 +24,16 @@ static void play(data **game, int whose_turn)
     my_putstr("\n");
     my_putstr(whose_turn == PLAYER1 ? (*game)->name1 : (*game)->name2);
     my_putstr(" now has ");
-    for (; (*game)->player1[i + 1]; i++) {
-        my_putchar((*game)->player1[i]);
-        my_putstr(", ");
+    if (whose_turn == PLAYER1) {
+        for (; (*game)->player1[i + 1]; i++) {
+            my_putchar((*game)->player1[i]);
+            my_putstr(", ");
+        }
+    } else {
+        for (; (*game)->player2[i + 1]; i++) {
+            my_putchar((*game)->player2[i]);
+            my_putstr(", ");
+        }
     }
     my_putchar((*game)->player1[i]);
     my_putstr("\n\n");
