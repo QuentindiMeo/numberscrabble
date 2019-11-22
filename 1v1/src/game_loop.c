@@ -35,7 +35,8 @@ static void play(data **game, int whose_turn)
             my_putstr(", ");
         }
     }
-    my_putchar((*game)->player1[i]);
+    my_putchar(whose_turn == PLAYER1 ?
+               (*game)->player1[i] : (*game)->player2[i]);
     my_putstr("\n\n");
     (*game)->board[(*game)->played_n - 1] = '-';
     my_putstr((*game)->board);
@@ -77,10 +78,10 @@ int game_loop(data *game)
         whose_turn = switch_turn(whose_turn);
         if (user_play(game, whose_turn) == END_OF_FILE)
             return (END_OF_FILE);
-        if (!(is_there_any_nb_left(game) == YES && !is_win(game)))
+        if (!(is_there_any_nb_left(game) == YES && !is_win(game, 0)))
             over = TRUE;
     }
-    if (!is_win(game))
+    if (!is_win(game, 1))
         whose_turn = DRAW;
     return (whose_turn);
 }

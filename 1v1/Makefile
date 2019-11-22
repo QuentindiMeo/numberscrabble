@@ -7,6 +7,7 @@
 
 SRC	=	src/error.c			\
 		src/game_loop.c			\
+		src/overpick.c			\
 		src/detectors.c			\
 		src/setup2.c			\
 		src/setup.c			\

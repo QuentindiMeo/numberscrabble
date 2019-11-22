@@ -34,9 +34,8 @@ typedef enum {
 
 int err_out_of_range(void);
 
-int is_win(data *game);
-
 int check_played_nb(data *game);
+int is_win(data *game, int id);
 int is_there_any_nb_left(data *game);
 int switch_turn(int id);
 int game_loop(data *game);
