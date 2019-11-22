@@ -40,7 +40,7 @@ void deny_player(data *game, int *have_to_target);
 int diag_is_abouttowin(char *p, char *n);
 int col_is_abouttowin(char *p, char *n);
 int row_is_abouttowin(char *p, char *n);
-int is_win(data *game);
+int is_win(data *game, int id);
 
 void ai_play(data *game);
 

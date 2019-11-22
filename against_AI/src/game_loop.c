@@ -69,10 +69,10 @@ int game_loop(data *game)
             ai_play(game);
         if (ret_v == END_OF_FILE)
             return (END_OF_FILE);
-        if (!(is_there_any_nb_left(game) == YES && !is_win(game)))
+        if (!(is_there_any_nb_left(game) == YES && !is_win(game, 0)))
             over = TRUE;
     }
-    if (!is_win(game))
+    if (!is_win(game, 1))
         whose_turn = DRAW;
     return (whose_turn);
 }
