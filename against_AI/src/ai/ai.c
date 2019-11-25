@@ -49,11 +49,11 @@ static void choose_random(data **g)
 void ai_play(data *game)
 {
     int rv1[3] = {row_is_abouttowin(game->player2, game->board),
-                  col_is_abouttowin(game->player2, game->board),
-                  diag_is_abouttowin(game->player2, game->board)};
+                    col_is_abouttowin(game->player2, game->board),
+                    diag_is_abouttowin(game->player2, game->board)};
     int rv2[3] = {row_is_abouttowin(game->player1, game->board),
-                  col_is_abouttowin(game->player1, game->board),
-                  diag_is_abouttowin(game->player1, game->board)};
+                    col_is_abouttowin(game->player1, game->board),
+                    diag_is_abouttowin(game->player1, game->board)};
 
     my_putstr("\nAI's turn...\n");
     if (rv1[0] || rv1[1] || rv1[2])
