@@ -36,7 +36,7 @@ static void play(data **game, int whose_turn)
         }
     }
     my_putchar(whose_turn == PLAYER1 ?
-               (*game)->player1[i] : (*game)->player2[i]);
+                (*game)->player1[i] : (*game)->player2[i]);
     my_putstr("\n\n");
     (*game)->board[(*game)->played_n - 1] = '-';
     my_putstr((*game)->board);

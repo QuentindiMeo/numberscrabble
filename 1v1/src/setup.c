@@ -64,7 +64,7 @@ void setup(data **game)
     (*game)->played_n = 0;
     for (uint i = 0; i < 10; i++) {
         (*game)->player1[i] = 0;
-	(*game)->player2[i] = 0;
+        (*game)->player2[i] = 0;
     }
     (*game)->name1 = my_strdup("Player 1");
     (*game)->name2 = my_strdup("Player 2");
